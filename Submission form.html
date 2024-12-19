@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Details</title>
+</head>
+<body>
+    <iframe src="https://forms.gle/yourGoogleFormID" width="100%" height="800" style="border:none;"></iframe>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const iframe = document.querySelector("iframe");
+
+            iframe.onload = function () {
+                const confirmationMessage = iframe.contentDocument.querySelector(".freebirdFormviewerViewResponseConfirmContentContainer");
+                if (confirmationMessage) {
+                    // Redirect to your desired URL
+                    setTimeout(() => {
+                        window.location.href = "https://www.raahghar.com/at/coorg";
+                    }, 2000); // 2-second delay before redirect
+                }
+            };
+        });
+    </script>
+</body>
+</html>
